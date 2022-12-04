@@ -7,7 +7,7 @@ To deploy the web site, PHP sources need to be compiled to HTML, possibly with t
 ## Building
 
 **Dependencies:**
-- An Unix system or Cygwin
+- A Unix system or Cygwin
 - GNU Make
 - PHP (version 8 or greater)
 - rsync
