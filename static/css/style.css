@@ -31,6 +31,8 @@
  * Custom fonts
  */
 
+/* Philosopher */
+
 @font-face {
     font-family: "Philosopher";
     src: url("/fonts/philosopher/Philosopher-Regular.ttf");
@@ -55,14 +57,40 @@
     font-style: italic;
 }
 
+/* PT Sans */
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("/fonts/pt/PTSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("/fonts/pt/PTSans-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("/fonts/pt/PTSans-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("/fonts/pt/PTSans-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
 /*
  * Basic page looks and typography
  */
 
 html {
     color: var(--clr-font-light);
-    font-family: "Philosopher", sans-serif;
-    font-size: 14pt;
+    font-family: "PT Sans", sans-serif;
+    font-size: 15pt;
 }
 
 body {
@@ -80,6 +108,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5 {
+    font-family: "Philosopher";
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
@@ -93,6 +122,10 @@ h1 {
 h2 {
     font-size: 30pt;
     margin: 28px 20px;
+}
+
+h5 {
+    font-size: 18pt;
 }
 
 /*
@@ -229,12 +262,11 @@ div.icons-horizontal {
 
 div.icons-horizontal > div {
     margin: 20px;
-    max-width: 200px;
+    max-width: 220px;
     text-align: center;
 }
 
 div.icons-horizontal h5 {
-    font-size: 16pt;
     margin: 0;
     margin-bottom: 10px;
 }
@@ -275,7 +307,6 @@ div.text-blocks h5 {
     text-align: left;
     text-transform: none;
     font-weight: bold;
-    font-size: 18pt;
 }
 
 div.text-blocks ul {
@@ -320,7 +351,6 @@ div.colour-blocks > div > div.header {
 }
 div.colour-blocks > div > div.header h5 {
     margin: 0;
-    font-size: 16pt;
     font-weight: bold;
 }
 div.colour-blocks > div > div.header p {
@@ -401,7 +431,6 @@ div.icon-text-rows > div > div.text h5 {
     margin: 0;
     text-transform: none;
     text-align: left;
-    font-size: 18pt;
 }
 div.icon-text-rows > div > div.text p {
     margin: 8px 0;
@@ -446,7 +475,6 @@ div.icon-text-blocks > div > div.text h5 {
     margin: 0;
     text-transform: none;
     text-align: left;
-    font-size: 18pt;
 }
 div.icon-text-blocks > div > div.text p {
     margin: 8px 0;
