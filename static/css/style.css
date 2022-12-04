@@ -35,6 +35,7 @@
     --dim-page-paragraph-width: 1000px;
     --dim-page-max-width: 1600px;
     --dim-gradient-line-width: 6px;
+    --dim-min-viewport-margin: 24px;
 }
 
 /*
@@ -192,10 +193,18 @@ header > div#header-background {
     background-color: var(--clr-bg-light);
 }
 
-header div#header-content {
+header div#header-wrap {
     height: var(--dim-header-height);
-    width: var(--dim-page-paragraph-width);
+    max-width: var(--dim-page-paragraph-width);
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header div#header-content {
+    width: 100%;
+    max-width: calc(100vw - 2 * var(--dim-min-viewport-margin));
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -204,11 +213,14 @@ header div#header-content {
     text-align: center;
     color: var(--clr-font-dark);
 }
-/* CSS variables not supported in a media query. Update manually! */
-@media screen and not (min-width: 1000px) {
-    header div#header-content {
-        width: 100%;
-    }
+
+div#header-left {
+    width: var(--dim-header-height);
+}
+div#header-center {
+}
+div#header-right {
+    width: var(--dim-header-height);
 }
 
 header div.logo-box {
@@ -224,14 +236,30 @@ header div.logo-box a {
 }
 header div.logo-box img#pxg-logo {
     display: block;
-    max-width: 100px;
-    max-height: calc(var(--dim-header-height) - 2*4px);
+    width: calc(var(--dim-header-height) - 2*4px);
+    height: calc(var(--dim-header-height) - 2*4px);
+    object-fit: contain;
 }
 
 header h1 {
     margin: 0;
     text-transform: uppercase;
     font-size: 29pt;
+}
+
+/* Alternative header behaviour for narrow screens */
+@media screen and not (min-width: 500px) {
+    div#header-right {
+        display: none;
+    }
+
+    div#header-left {
+        margin-right: 16px;
+    }
+
+    header div#header-content {
+        justify-content: left;
+    }
 }
 
 /*
@@ -261,7 +289,7 @@ div#footer-content {
 }
 
 div#footer-icons {
-    max-width: calc(100vw - 2*10px);
+    max-width: calc(100vw - 2 * var(--dim-min-viewport-margin));
     margin: 0 auto;
     display: flex;
     flex-direction: row;

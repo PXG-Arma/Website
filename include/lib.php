@@ -14,15 +14,19 @@ function insert_header(PageMeta $meta) {
 ?>
 <header id='top'>
     <div id='header-background'>
-        <div id='header-content'>
-            <div class='logo-box'>
-                <a href='/'><img id='pxg-logo' title='Phoenix Group' alt='Phoenix Group logo' src='/img/pxg/logo.png'></a>
+        <div id='header-wrap'>
+            <div id='header-content'>
+                <div id='header-left'>
+                    <div class='logo-box'>
+                        <a href='/'><img id='pxg-logo' title='Phoenix Group' alt='Phoenix Group logo' src='/img/pxg/logo.png'></a>
+                    </div>
+                </div>
+                <div id='header-center'>
+                    <h1>Bootcamp</h1>
+                </div>
+                <div id='header-right'>
+                </div>
             </div>
-            <div class='title'>
-                <h1>Bootcamp</h1>
-            </div>
-            <!-- For centering the title -->
-            <div class='logo-box'></div>
         </div>
     </div>
 </header>
