@@ -1,0 +1,489 @@
+/*
+ * Variable definitions
+ */
+
+:root {
+    /* Colours */
+
+    /* PXG colours */
+    --clr-pxg-orange: #f8951d;
+    --clr-pxg-red: #f1372a;
+
+    /* Font colours */
+    --clr-font-dark: #2d2c2d;
+    --clr-font-light: #eaebee;
+
+    /* Background colours */
+    --clr-bg-dark: #2d2c2d;
+    --clr-bg-light: #eaebee;
+
+    /* Highlight colours */
+    --clr-hl-green: #00953f;
+    --clr-hl-black: #242424;
+
+    /* Dimensions */
+    --dim-header-height: 70px;
+    --dim-page-paragraph-width: 1000px;
+    --dim-page-max-width: 1600px;
+}
+
+/*
+ * Custom fonts
+ */
+
+@font-face {
+    font-family: "Philosopher";
+    src: url("/fonts/philosopher/Philosopher-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Philosopher";
+    src: url("/fonts/philosopher/Philosopher-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Philosopher";
+    src: url("/fonts/philosopher/Philosopher-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Philosopher";
+    src: url("/fonts/philosopher/Philosopher-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*
+ * Basic page looks and typography
+ */
+
+html {
+    color: var(--clr-font-light);
+    font-family: "Philosopher", sans-serif;
+    font-size: 14pt;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--clr-bg-dark);
+}
+
+a {
+    color: var(--clr-pxg-orange);
+    transition: color 80ms ease;
+}
+a:hover {
+    color: var(--clr-pxg-red);
+}
+
+h1, h2, h3, h4, h5 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 46pt;
+    margin: 42px 0 24px;
+}
+
+h2 {
+    font-size: 30pt;
+    margin: 28px 20px;
+}
+
+/*
+ * Basic element variants
+ */
+
+ul.no-bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.no-bullets li {
+    margin: 7px 0;
+}
+
+/*
+ * Big page parts
+ */
+
+section {
+    margin: 47px auto 35px;
+}
+
+body > section {
+    max-width: var(--dim-page-paragraph-width);
+}
+
+section.wide {
+    max-width: var(--dim-page-max-width);
+}
+
+body > h1,
+body > h2,
+body > h3,
+body > p {
+    max-width: var(--dim-page-paragraph-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+ * Header
+ */
+
+header {
+    width: 100%;
+    height: var(--dim-header-height);
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--clr-bg-light);
+    color: var(--clr-font-dark);
+    border-bottom: 3px solid var(--clr-pxg-red);
+}
+
+header > a {
+    display: block;
+}
+header img#pxg-logo {
+    display: block;
+    max-width: 100px;
+    max-height: calc(var(--dim-header-height) - 2*4px);
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    margin-left: 24px;
+    text-transform: uppercase;
+    font-size: 29pt;
+}
+
+/*
+ * Footer
+ */
+
+footer {
+    display: block;
+    width: 100%;
+    margin: 47px 0 0;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    background: linear-gradient(to bottom, var(--clr-pxg-orange), #663800);
+    color: var(--clr-font-light);
+    text-align: center;
+    border-top: 3px solid var(--clr-pxg-red);
+}
+
+footer p {
+    margin: 5px auto;
+    max-width: var(--dim-page-paragraph-width);
+}
+
+footer a {
+    color: var(--clr-pxg-red);
+}
+footer a:hover {
+    color: var(--clr-font-light);
+}
+
+/*
+ * Content containers
+ */
+
+/* Horizontal icon container */
+
+div.icons-horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.icons-horizontal > div {
+    margin: 20px;
+    max-width: 200px;
+    text-align: center;
+}
+
+div.icons-horizontal h5 {
+    font-size: 16pt;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+div.icons-horizontal img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 8px auto;
+}
+
+div.icons-horizontal p {
+    margin: 10px 0;
+}
+
+/* Text blocks */
+
+div.text-blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.text-blocks > div {
+    margin: 20px 26px;
+    width: 400px;
+}
+@media screen and not (min-width: 400px) {
+    div.text-blocks > div {
+        width: 90%;
+    }
+}
+
+div.text-blocks h5 {
+    margin: 0;
+    text-align: left;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+div.text-blocks ul {
+    margin: 12px 0;
+    padding-left: 12px;
+    list-style-type: "✚";
+}
+div.text-blocks li {
+    list-style-type: "✚";
+    margin: 7px 0;
+    padding-left: 10px;
+}
+
+/* Colour blocks */
+
+div.colour-blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.colour-blocks > div {
+    width: 300px;
+    margin: 10px;
+    background-color: var(--clr-bg-light);
+    color: var(--clr-font-dark);
+    border: 3px solid;
+    border-color: magenta;
+}
+@media screen and not (min-width: 300px) {
+    div.colour-blocks > div {
+        width: 90%;
+    }
+}
+
+div.colour-blocks > div > div.header {
+    background-color: magenta;
+    color: var(--clr-font-light);
+    text-align: center;
+    padding: 10px 14px;
+}
+div.colour-blocks > div > div.header h5 {
+    margin: 0;
+    font-size: 16pt;
+    font-weight: bold;
+}
+div.colour-blocks > div > div.header p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+div.colour-blocks > div ul {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+div.colour-blocks > div li {
+    margin: 7px 0;
+}
+
+/* Colour variants of colour blocks */
+
+div.colour-blocks > div.clr-green {
+    border-color: var(--clr-hl-green);
+}
+div.colour-blocks > div.clr-green > div.header {
+    background-color: var(--clr-hl-green);
+}
+
+div.colour-blocks > div.clr-orange {
+    border-color: var(--clr-pxg-orange);
+}
+div.colour-blocks > div.clr-orange > div.header {
+    background-color: var(--clr-pxg-orange);
+}
+
+div.colour-blocks > div.clr-red {
+    border-color: var(--clr-pxg-red);
+}
+div.colour-blocks > div.clr-red > div.header {
+    background-color: var(--clr-pxg-red);
+}
+
+div.colour-blocks > div.clr-black {
+    border-color: black;
+}
+div.colour-blocks > div.clr-black > div.header {
+    background-color: black;
+}
+
+/* Icon-text rows */
+
+div.icon-text-rows {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+}
+
+div.icon-text-rows > div {
+    margin: 10px auto;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+}
+
+div.icon-text-rows > div > img {
+    display: block;
+    margin: auto 0;
+    margin-right: 30px;
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+
+div.icon-text-rows > div > div.text {
+}
+
+div.icon-text-rows > div > div.text h5 {
+    margin: 0;
+    text-transform: none;
+    text-align: left;
+    font-size: 18pt;
+}
+div.icon-text-rows > div > div.text p {
+    margin: 8px 0;
+}
+
+/* Icon-text blocks */
+
+div.icon-text-blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+div.icon-text-blocks > div {
+    margin: 10px auto;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+}
+@media screen and not (min-width: 400px) {
+    div.icon-text-blocks > div {
+        width: 90%;
+    }
+}
+
+div.icon-text-blocks > div > img {
+    display: block;
+    margin: auto 0;
+    margin-right: 30px;
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+
+div.icon-text-blocks > div > div.text {
+}
+
+div.icon-text-blocks > div > div.text h5 {
+    margin: 0;
+    text-transform: none;
+    text-align: left;
+    font-size: 18pt;
+}
+div.icon-text-blocks > div > div.text p {
+    margin: 8px 0;
+}
+
+/* Banner boxes */
+
+div.banner-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+div.banner-container > div {
+    display: inline-block;
+    margin: 8px auto;
+    padding: 10px 14px;
+    color: var(--clr-font-light);
+    background-color: magenta;
+}
+
+div.banner-container div.clr-red {
+    background-color: var(--clr-pxg-red);
+}
+
+/*
+ * Tables
+ */
+
+/* Dictionary table */
+
+table.dictionary {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+table.dictionary td {
+    padding: 6px 8px;
+}
+
+table.dictionary > tbody > tr > td:first-child {
+    font-weight: bold;
+    text-align: right;
+}
+
+/*
+ * Embedded objects
+ */
+
+/* YouTube video */
+
+iframe.emb-yt {
+    display: block;
+    margin: 0 auto;
+}

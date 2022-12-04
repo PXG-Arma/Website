@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="29.662941mm"
+   height="33.866703mm"
+   viewBox="0 0 29.662941 33.866703"
+   version="1.1"
+   id="svg11259"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   sodipodi:docname="muscle.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11261"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.7500982"
+     inkscape:cx="-72.657153"
+     inkscape:cy="127.98324"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     inkscape:window-x="0"
+     inkscape:window-y="29"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs11256" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-122.38112,-114.63553)">
+    <g
+       id="Muscle"
+       transform="matrix(0.19366997,0,0,0.19366997,110.51591,80.537625)"
+       style="clip-rule:evenodd;fill:#eaebee;fill-opacity:1;fill-rule:evenodd;stroke-miterlimit:2">
+        <path
+   d="m 155.256,295.267 c 0,0 9.953,-13.271 26.266,-12.995 16.313,0.277 32.626,12.995 32.902,34.008 0.277,21.013 -16.313,32.902 -31.243,33.455 -14.93,0.553 -110.318,7.189 -120.548,-17.972 -3.821,-9.398 1.424,-48.13 2.875,-69.688 2.323,-34.492 11.281,-48.194 12.387,-58.043 1.639,-14.591 8.405,-28.327 16.976,-27.963 8.571,0.364 24.296,9.986 25.955,17.175 0.873,3.78 -3.647,9.114 -1.381,13.003 1.426,2.448 -3.279,6.522 -8.296,9.116 -4.155,2.148 -6.967,1.935 -9.179,5.308 -1.971,3.006 -1.106,20.35 -0.83,38.045 0.277,17.695 4.072,38.487 4.072,38.487 0,0 6.029,-10.51 25.404,-11.336 17.764,-0.758 24.64,9.4 24.64,9.4 z"
+   style="fill:#eaebee;fill-opacity:1"
+   id="path36" />
+
+    </g>
+  </g>
+</svg>

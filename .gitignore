@@ -1,0 +1,5 @@
+# Editor swap files
+*.swp
+
+# Directory with temporary files from the build process
+/build
