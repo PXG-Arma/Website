@@ -2,7 +2,7 @@
 
 This repository contains source files for the PXG web site. It is also the place where its development happens. The site is deployed in repo [PXG-Arma/PXG-Arma.github.io](https://github.com/PXG-Arma/PXG-Arma.github.io).
 
-To deploy the website, PHP sources need to be compiled to HTML, possibly with the help of the tools listed below.
+To deploy the web site, PHP sources need to be compiled to HTML, possibly with the help of the tools listed below.
 
 ## Building
 
@@ -26,5 +26,5 @@ The sync operation assumes that the deployment repo [PXG-Arma/PXG-Arma.github.io
 ```text
 PXG
 ├── PXG-Arma.github.io
-└── website
+└── Website
 ```
