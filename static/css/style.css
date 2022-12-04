@@ -236,24 +236,55 @@ footer {
     display: block;
     width: 100%;
     margin: 47px 0 0;
+    padding-top: 5px;
+    background: linear-gradient(to right, var(--clr-pxg-orange), var(--clr-pxg-red));
+}
+
+footer > div#footer-background {
+    width: 100%;
+    background-color: var(--clr-bg-dark);
+}
+
+div#footer-content {
+    max-width: var(--dim-page-paragraph-width);
+    margin: 0 auto;
     padding-top: 16px;
     padding-bottom: 12px;
-    background: linear-gradient(to bottom, var(--clr-pxg-orange), #663800);
     color: var(--clr-font-light);
     text-align: center;
-    border-top: 3px solid var(--clr-pxg-red);
 }
 
-footer p {
-    margin: 5px auto;
-    max-width: var(--dim-page-paragraph-width);
+div#footer-icons {
+    max-width: calc(100vw - 2*10px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
-footer a {
-    color: var(--clr-pxg-red);
+div#footer-icons a {
+    display: block;
+    margin: 0 6px;
 }
-footer a:hover {
-    color: var(--clr-font-light);
+
+div#footer-icons a > img {
+    display: block;
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+
+div#footer-icons > div#footer-icons-left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+div#footer-icons > div#footer-icons-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 /*
@@ -540,4 +571,5 @@ table.dictionary > tbody > tr > td:first-child {
 iframe.emb-yt {
     display: block;
     margin: 0 auto;
+    max-width: 90vw;
 }

@@ -12,7 +12,7 @@ include_once $_SERVER['PWD'] . '/include/PageMeta.php';
  */
 function insert_header(PageMeta $meta) {
 ?>
-<header>
+<header id='top'>
     <div id='header-wrap'>
         <div class='logo-box'>
             <a href='/'><img id='pxg-logo' title='Phoenix Group' alt='Phoenix Group logo' src='/img/pxg/logo.png'></a>
@@ -34,7 +34,28 @@ function insert_header(PageMeta $meta) {
 function insert_footer(PageMeta $meta) {
 ?>
 <footer>
-    <p>Training materials made available by <a href='https://discord.gg/3heMP2jtyw'>Phoenix Group</a>.</p>
+    <div id='footer-background'>
+        <div id='footer-content'>
+            <div id='footer-icons'>
+                <div id='footer-icons-left'>
+                    <a href='<?= PXG_DISCORD_LINK ?>'>
+                        <img alt='Discord' title='Discord' src='/img/icons/discord.png'>
+                    </a>
+                    <a href='<?= PXG_YT_LINK ?>'>
+                        <img alt='YouTube' title='YouTube' src='/img/icons/youtube.png'>
+                    </a>
+                    <a href='#top'>
+                        <img alt='To Top' title='To Top' src='/img/icons/top.svg'>
+                    </a>
+                </div>
+                <div id='footer-icons-right'>
+                    <a href='/'>
+                        <img alt='Phoenix Group' title='Phoenix Group' src='/img/pxg/logo.png'>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 <?php
 }
