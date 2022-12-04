@@ -13,10 +13,16 @@ include_once $_SERVER['PWD'] . '/include/PageMeta.php';
 function insert_header(PageMeta $meta) {
 ?>
 <header>
-    <a href='<?= PXG_DISCORD_LINK ?>'>
-        <img id='pxg-logo' title='Phoenix Group' alt='Phoenix Group logo' src='/img/pxg/logo.png'>
-    </a>
-    <h1>Bootcamp</h1>
+    <div id='header-wrap'>
+        <div class='logo-box'>
+            <a href='/'><img id='pxg-logo' title='Phoenix Group' alt='Phoenix Group logo' src='/img/pxg/logo.png'></a>
+        </div>
+        <div class='title'>
+            <h1>Bootcamp</h1>
+        </div>
+        <!-- For centering the title -->
+        <div class='logo-box'></div>
+    </div>
 </header>
 <?php
 }

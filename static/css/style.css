@@ -141,21 +141,40 @@ header {
     width: 100%;
     height: var(--dim-header-height);
     margin: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     background-color: var(--clr-bg-light);
     color: var(--clr-font-dark);
     border-bottom: 3px solid var(--clr-pxg-red);
 }
 
-header > a {
-    display: block;
+header div#header-wrap {
+    width: var(--dim-page-paragraph-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
-header img#pxg-logo {
+/* CSS variables not supported in a media query. Update manually! */
+@media screen and not (min-width: 1000px) {
+    header div#header-wrap {
+        width: 100%;
+    }
+}
+
+header div.logo-box {
+    width: var(--dim-header-height);
+    height: var(--dim-header-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header div.logo-box a {
+    display: block;
+    margin: 0;
+}
+header div.logo-box img#pxg-logo {
     display: block;
     max-width: 100px;
     max-height: calc(var(--dim-header-height) - 2*4px);
@@ -163,8 +182,6 @@ header img#pxg-logo {
 
 header h1 {
     margin: 0;
-    padding: 0;
-    margin-left: 24px;
     text-transform: uppercase;
     font-size: 29pt;
 }
