@@ -34,6 +34,7 @@
     --dim-header-height: 70px;
     --dim-page-paragraph-width: 1000px;
     --dim-page-max-width: 1600px;
+    --dim-gradient-line-width: 6px;
 }
 
 /*
@@ -181,15 +182,18 @@ body > p {
 
 header {
     width: 100%;
-    height: var(--dim-header-height);
     margin: 0;
-    text-align: center;
-    background-color: var(--clr-bg-light);
-    color: var(--clr-font-dark);
-    border-bottom: 3px solid var(--clr-pxg-red);
+    padding-bottom: var(--dim-gradient-line-width);
+    background: linear-gradient(to right, var(--clr-pxg-orange), var(--clr-pxg-red));
 }
 
-header div#header-wrap {
+header > div#header-background {
+    width: 100%;
+    background-color: var(--clr-bg-light);
+}
+
+header div#header-content {
+    height: var(--dim-header-height);
     width: var(--dim-page-paragraph-width);
     margin: 0 auto;
     display: flex;
@@ -197,10 +201,12 @@ header div#header-wrap {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+    color: var(--clr-font-dark);
 }
 /* CSS variables not supported in a media query. Update manually! */
 @media screen and not (min-width: 1000px) {
-    header div#header-wrap {
+    header div#header-content {
         width: 100%;
     }
 }
@@ -236,8 +242,8 @@ footer {
     display: block;
     width: 100%;
     margin: 47px 0 0;
-    padding-top: 5px;
-    background: linear-gradient(to right, var(--clr-pxg-orange), var(--clr-pxg-red));
+    padding-top: var(--dim-gradient-line-width);
+    background: linear-gradient(to left, var(--clr-pxg-orange), var(--clr-pxg-red));
 }
 
 footer > div#footer-background {
