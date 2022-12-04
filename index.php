@@ -238,11 +238,6 @@ begin_page($meta);
                 <li>Pain relief from morphine is temporary.</li>
                 <li>Does not directly impact consciousness.</li>
             </ul>
-            <div class='banner-container'>
-                <div class='clr-red'>
-                    The generic vital readings used by non-medical personnel must NEVER be used to determine if it is safe to use medication. For example, a "normal" pulse can be dangerously low 45&nbsp;BPM!
-                </div>
-            </div>
         </div>
         <div>
             <h5>Epinephrine</h5>
@@ -252,6 +247,12 @@ begin_page($meta);
                 <li>Do not assume epinephrine is required following morphine. Wait for vitals to settle first.</li>
                 <li>Does not directly impact consciousness.</li>
             </ul>
+        </div>
+    </div>
+
+    <div class='banner-container'>
+        <div class='clr-red'>
+            The generic vital readings used by non-medical personnel must NEVER be used to determine if it is safe to use medication. For example, a "normal" pulse can be dangerously low 45&nbsp;BPM!
         </div>
     </div>
 </section>

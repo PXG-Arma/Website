@@ -268,7 +268,6 @@ div.icons-horizontal > div {
 
 div.icons-horizontal h5 {
     margin: 0;
-    margin-bottom: 10px;
 }
 
 div.icons-horizontal img {
@@ -276,7 +275,7 @@ div.icons-horizontal img {
     width: 80px;
     height: 80px;
     object-fit: contain;
-    margin: 8px auto;
+    margin: 18px auto;
 }
 
 div.icons-horizontal p {
@@ -447,13 +446,13 @@ div.icon-text-blocks {
 
 div.icon-text-blocks > div {
     margin: 10px auto;
-    width: 400px;
+    width: 440px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: left;
 }
-@media screen and not (min-width: 400px) {
+@media screen and not (min-width: 460px) {
     div.icon-text-blocks > div {
         width: 90%;
     }
@@ -463,8 +462,8 @@ div.icon-text-blocks > div > img {
     display: block;
     margin: auto 0;
     margin-right: 30px;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     object-fit: contain;
 }
 
@@ -473,6 +472,7 @@ div.icon-text-blocks > div > div.text {
 
 div.icon-text-blocks > div > div.text h5 {
     margin: 0;
+    margin-bottom: 9px;
     text-transform: none;
     text-align: left;
 }
@@ -493,7 +493,7 @@ div.banner-container {
 div.banner-container > div {
     display: inline-block;
     margin: 8px auto;
-    padding: 10px 14px;
+    padding: 12px 18px;
     color: var(--clr-font-light);
     background-color: magenta;
 }
