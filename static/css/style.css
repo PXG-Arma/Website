@@ -5,21 +5,30 @@
 :root {
     /* Colours */
 
-    /* PXG colours */
-    --clr-pxg-orange: #f8951d;
+    /* PXG palette colours */
+
+    /* "Jet" */
+    --clr-pxg-dark: #2d2c2d;
+    /* "Cinnabar" */
     --clr-pxg-red: #f1372a;
+    /* "Yellow Orange Color Wheel */
+    --clr-pxg-orange: #f8951d;
+    /* "Cultured" */
+    --clr-pxg-light: #eaebee;
+    /* "Rich Black FOGRA 39" */
+    --clr-pxg-black: #0a0a0a;
 
     /* Font colours */
-    --clr-font-dark: #2d2c2d;
-    --clr-font-light: #eaebee;
+    --clr-font-dark: var(--clr-pxg-dark);
+    --clr-font-light: var(--clr-pxg-light);
 
     /* Background colours */
-    --clr-bg-dark: #2d2c2d;
-    --clr-bg-light: #eaebee;
+    --clr-bg-dark: var(--clr-pxg-dark);
+    --clr-bg-light: var(--clr-pxg-light);
 
     /* Highlight colours */
     --clr-hl-green: #00953f;
-    --clr-hl-black: #242424;
+    --clr-hl-black: var(--clr-pxg-black);
 
     /* Dimensions */
     --dim-header-height: 70px;
@@ -390,10 +399,10 @@ div.colour-blocks > div.clr-red > div.header {
 }
 
 div.colour-blocks > div.clr-black {
-    border-color: black;
+    border-color: var(--clr-pxg-black);
 }
 div.colour-blocks > div.clr-black > div.header {
-    background-color: black;
+    background-color: var(--clr-pxg-black);
 }
 
 /* Icon-text rows */
