@@ -661,6 +661,39 @@ div.banner-container div.clr-red {
     background-color: var(--clr-pxg-red);
 }
 
+/* Training topic blocks */
+
+div.training-blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.training-blocks > div {
+    width: 240px;
+    margin: 20px 14px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+div.training-blocks > div img {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+div.training-blocks > div h5 {
+    display: block;
+    margin: 15px 0 0;
+}
+div.training-blocks > div p {
+    display: block;
+    margin: 8px 0 0;
+}
+
 /*
  * Tables
  */

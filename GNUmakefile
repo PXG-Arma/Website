@@ -16,6 +16,8 @@ BUILD_DIR = build
 STATIC_DIR = static
 # Directory containing PHP library files
 PHP_LIB_DIR = include
+# Directories containing PHP source files
+PHP_SRC_DIRS = . training members
 # Path to the root of the web site deployment repository
 REPO_PATH = ../PXG-Arma.github.io
 # PHP executable to use
@@ -27,22 +29,22 @@ RSYNC_PARAMS = -aic
 # PHP libraries required to process the sources
 PHP_LIBS := $(wildcard $(PHP_LIB_DIR)/*.php)
 # PHP source files to process with PHP to HTML
-PHP_SOURCES := $(wildcard *.php)
+PHP_SOURCES := $(foreach dir, $(PHP_SRC_DIRS), $(wildcard $(dir)/*.php))
 # Target HTML files in the build directory
 HTML_PAGES := $(addprefix $(BUILD_DIR)/,$(PHP_SOURCES:.php=.html))
 
-.PHONY: html clean sync
+.PHONY: html source-dirs clean sync
 
 # Compiles all PHP sources to HTML
 html: $(HTML_PAGES)
 
 # Processes a .php file with PHP to produce HTML file
-$(BUILD_DIR)/%.html: %.php $(PHP_LIBS) | $(BUILD_DIR)
+$(BUILD_DIR)/%.html: %.php $(PHP_LIBS) | source-dirs
 	$(PHP) -f '$<' > '$@'
 
-# Creates the build directory
-$(BUILD_DIR):
-	mkdir -p $@
+# Creates directories for compiled HTML fields inside the build dir
+source-dirs:
+	mkdir -p $(addprefix $(BUILD_DIR)/, $(PHP_SRC_DIRS))
 
 # Removes the build directory
 clean:

@@ -3,13 +3,13 @@
 include_once $_SERVER['PWD'] . '/include/lib.php';
 
 $meta = new PageMeta(
-    title: 'Phoenix Group Bootcamp',
+    title: 'Members',
 );
 
 begin_page($meta);
 ?>
 <section>
-    <p>Not much here yet.</p>
+    <p>Nothing useful here yet. For now.</p>
 </section>
 <?php
 end_page($meta);

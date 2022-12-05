@@ -5,6 +5,36 @@ include_once $_SERVER['PWD'] . '/include/navigation.php';
 include_once $_SERVER['PWD'] . '/include/PageMeta.php';
 
 #
+# Utility functions
+#
+
+/**
+ * Returns `true` if PHP is running from command line interface.
+ *
+ * Otherwise it probably runs on a server.
+ */
+function php_running_from_cli(): bool {
+    return php_sapi_name() === 'cli';
+}
+
+/**
+ * Returns URL pointing to a local resource.
+ *
+ * If running from CLI, URLs ending with `.php` are reformatted to end
+ * with `.html` instead.
+ */
+function local_url(string $url) : string {
+    if (php_running_from_cli()) {
+        if (str_ends_with($url, '.php')) {
+            $trimmed = rtrim($url, '.php');
+            return "$trimmed.html";
+        }
+    }
+
+    return $url;
+}
+
+#
 # Helper functions
 #
 
@@ -80,10 +110,12 @@ function insert_navigation(PageMeta $meta) {
         <div id='main-nav-content'>
 <?php foreach (get_nav_entries() as $entry): ?>
             <div class='nav-entry'>
-                <a href='<?= $entry->url ?>'>
+                <a href='<?= local_url($entry->url) ?>'>
                 <div class='nav-text'>
                     <h5><?= $entry->title ?></h5>
+<?php if (!empty($entry->description)): ?>
                     <p><?= $entry->description ?></p>
+<?php endif ?>
                 </div>
                 </a>
                 <div class='nav-decoration'></div>
@@ -121,7 +153,7 @@ function begin_page(PageMeta $meta) {
     <head>
         <meta charset='utf-8'>
         <title><?= SITE_TITLE ?></title>
-        <link href='css/style.css' rel='stylesheet'>
+        <link href='/css/style.css' rel='stylesheet'>
         <link rel='icon' type='image/x-icon' href='/img/pxg/favicon.png'>
         <script src='/js/main.js'></script>
         <script src='/js/jquery.min.js'></script>
