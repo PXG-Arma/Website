@@ -1,6 +1,7 @@
 <?php
 
 include_once $_SERVER['PWD'] . '/include/constants.php';
+include_once $_SERVER['PWD'] . '/include/navigation.php';
 include_once $_SERVER['PWD'] . '/include/PageMeta.php';
 
 #
@@ -25,6 +26,9 @@ function insert_header(PageMeta $meta) {
                     <h1>Bootcamp</h1>
                 </div>
                 <div id='header-right'>
+                    <div id='header-menu-button'>
+                        <img alt='Menu' title='Menu' src='/img/icons/menu.svg'>
+                    </div>
                 </div>
             </div>
         </div>
@@ -50,7 +54,7 @@ function insert_footer(PageMeta $meta) {
                     <a href='<?= PXG_YT_LINK ?>'>
                         <img alt='YouTube' title='YouTube' src='/img/icons/youtube.png'>
                     </a>
-                    <a href='#top'>
+                    <a id='button-to-top' href='#top'>
                         <img alt='To Top' title='To Top' src='/img/icons/top.svg'>
                     </a>
                 </div>
@@ -63,6 +67,40 @@ function insert_footer(PageMeta $meta) {
         </div>
     </div>
 </footer>
+<?php
+}
+
+/**
+ * Inserts the main navigation.
+ */
+function insert_navigation(PageMeta $meta) {
+?>
+<nav id='main-navigation'>
+    <div id='main-nav-background'>
+        <div id='main-nav-content'>
+<?php foreach (get_nav_entries() as $entry): ?>
+            <div class='nav-entry'>
+                <a href='<?= $entry->url ?>'>
+                <div class='nav-text'>
+                    <h5><?= $entry->title ?></h5>
+                    <p><?= $entry->description ?></p>
+                </div>
+                </a>
+                <div class='nav-decoration'></div>
+            </div>
+<?php endforeach ?>
+        </div>
+    </div>
+</nav>
+<?php
+}
+
+/**
+ * Inserts the notice that shows when JavaScript is not enabled.
+ */
+function insert_noscript() {
+?>
+<noscript>This web site requires JavaScript to function properly.</noscript>
 <?php
 }
 
@@ -85,13 +123,18 @@ function begin_page(PageMeta $meta) {
         <title><?= SITE_TITLE ?></title>
         <link href='css/style.css' rel='stylesheet'>
         <link rel='icon' type='image/x-icon' href='/img/pxg/favicon.png'>
+        <script src='/js/main.js'></script>
+        <script src='/js/jquery.min.js'></script>
     </head>
 
     <body>
 <?php
-
+    echo "\n";
+    insert_noscript();
     echo "\n";
     insert_header($meta);
+    echo "\n";
+    insert_navigation($meta);
 
     if (true === $meta->display_title) {
         echo "\n" . "<h1 id='title'>$meta->title</h1>" . "\n";

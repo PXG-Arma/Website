@@ -178,6 +178,21 @@ body > p {
 }
 
 /*
+ * No JavaScript notice
+ */
+
+noscript {
+    display: block;
+    width: 100%;
+    padding: 6px 0;
+    text-align: center;
+    font-size: 13pt;
+    font-weight: bold;
+    background-color: var(--clr-pxg-red);
+    color: var(--clr-font-light);
+}
+
+/*
  * Header
  */
 
@@ -247,18 +262,20 @@ header h1 {
     font-size: 29pt;
 }
 
+div#header-menu-button > img {
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin: auto 0;
+    margin-left: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+
 /* Alternative header behaviour for narrow screens */
 @media screen and not (min-width: 500px) {
-    div#header-right {
+    div#header-center {
         display: none;
-    }
-
-    div#header-left {
-        margin-right: 16px;
-    }
-
-    header div#header-content {
-        justify-content: left;
     }
 }
 
@@ -319,6 +336,74 @@ div#footer-icons > div#footer-icons-right {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+}
+
+/*
+ * Navigation
+ */
+
+nav#main-navigation {
+    display: none;
+    position: absolute;
+    top: calc(var(--dim-header-height) + var(--dim-gradient-line-width));
+    width: 100%;
+    background: linear-gradient(to left, var(--clr-pxg-orange), var(--clr-pxg-red));
+    padding-bottom: calc(var(--dim-gradient-line-width) * (3/5));
+}
+
+div#main-nav-background {
+    width: 100%;
+    background-color: var(--clr-pxg-light);
+}
+
+div#main-nav-content {
+    max-width: var(--dim-page-paragraph-width);
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 14px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: right;
+    text-align: right;
+}
+
+div#main-nav-content div.nav-entry {
+    padding: 12px 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+div#main-nav-content div.nav-entry h5 {
+    margin: 0;
+    margin-bottom: 7px;
+    font-size: 16pt;
+    text-align: inherit;
+}
+div#main-nav-content div.nav-entry p {
+    max-width: 150px;
+    margin: 0;
+    margin-left: auto;
+    font-size: 13pt;
+    text-align: inherit;
+}
+
+div#main-nav-content a {
+    text-decoration: none;
+}
+div#main-nav-content a:hover {
+}
+
+div#main-nav-content div.nav-entry div.nav-text {
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+div#main-nav-content div.nav-entry div.nav-decoration {
+    width: 3px;
+    height: 100%;
+    margin: auto 0;
+    margin-left: 16px;
+    background-color: var(--clr-pxg-orange);
 }
 
 /*
