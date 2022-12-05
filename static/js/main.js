@@ -23,6 +23,10 @@ var NAVIGATION_TRANSITION_TIME = 200;
  * Duration in ms for scrolling animations.
  */
 var VIEWPORT_SCROLL_ANIMATION_TIME = 1000;
+/**
+ * Duration in ms for which the header menu button is disabled on request.
+ */
+var HEADER_MENU_BUTTON_DISABLE_TIME = 400;
 
 //
 // Element IDs
@@ -42,6 +46,10 @@ var ID_BUTTON_TO_TOP = 'button-to-top';
  * Value of -1 indicates that no timeout is presently active.
  */
 var mainNavTimeoutID = -1;
+/**
+ * Whether header menu button can be activated by clicking it.
+ */
+var headerMenuButtonEnabled = true;
 
 //
 // On page load
@@ -82,19 +90,26 @@ document.addEventListener('DOMContentLoaded', function() {
  * Shows the navigation on click, hides it on the next click.
  */
 function headerMenuButtonOnClick() {
-    if (true === isMainNavigationShown()) {
-        hideMainNavigation();
-    }
-    else {
-        showMainNavigation();
+    if (true === headerMenuButtonEnabled) {
+        disableHeaderMenuButton();
+
+        if (true === isMainNavigationShown()) {
+            hideMainNavigation();
+        }
+        else {
+            showMainNavigation();
+        }
     }
 }
 /**
  * Header menu button: on mouse enter
  */
 function headerMenuButtonOnMouseEnter(event) {
-    clearMainNavHideTimeout();
-    showMainNavigation();
+    if (true === headerMenuButtonEnabled) {
+        disableHeaderMenuButton();
+        clearMainNavHideTimeout();
+        showMainNavigation();
+    }
 }
 /**
  * Header menu button: on mouse leave
@@ -203,4 +218,18 @@ function clearMainNavHideTimeout() {
         clearTimeout(mainNavTimeoutID);
         mainNavTimeoutID = -1;
     }
+}
+
+/**
+ * Temporarily disables header menu button for a time period.
+ *
+ * This is to prevent double event activation (hover + button click or double
+ * button click).
+ */
+function disableHeaderMenuButton() {
+    headerMenuButtonEnabled = false;
+    setTimeout(
+        () => { headerMenuButtonEnabled = true},
+        HEADER_MENU_BUTTON_DISABLE_TIME
+    );
 }
