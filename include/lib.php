@@ -27,6 +27,11 @@ function local_url(string $url) : string {
     if (php_running_from_cli()) {
         if (str_ends_with($url, '.php')) {
             $trimmed = rtrim($url, '.php');
+
+            # Add a forward '/' only if it's not already present
+            if (!str_starts_with($trimmed, '/'))
+                $trimmed = '/' . $trimmed;
+
             return "$trimmed.html";
         }
     }
@@ -53,7 +58,6 @@ function insert_header(PageMeta $meta) {
                     </div>
                 </div>
                 <div id='header-center'>
-                    <h1>Bootcamp</h1>
                 </div>
                 <div id='header-right'>
                     <div id='header-menu-button'>

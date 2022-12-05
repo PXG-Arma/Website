@@ -17,7 +17,7 @@ STATIC_DIR = static
 # Directory containing PHP library files
 PHP_LIB_DIR = include
 # Directories containing PHP source files
-PHP_SRC_DIRS = . training members
+PHP_SRC_DIRS = . training
 # Path to the root of the web site deployment repository
 REPO_PATH = ../PXG-Arma.github.io
 # PHP executable to use

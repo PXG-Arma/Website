@@ -422,7 +422,7 @@ begin_page($meta);
 <section>
     <h2 id='what-not-to-do'>What Not To Do</h2>
 
-    <iframe class='emb-yt' width="560" height="315" src="https://www.youtube-nocookie.com/embed/SgPQ6W0lnpU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class='emb-yt' width="560" height="315" src="https://www.youtube-nocookie.com/embed/SgPQ6W0lnpU" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
 <?php
 end_page($meta);

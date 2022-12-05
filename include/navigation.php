@@ -59,8 +59,8 @@ function get_nav_entries(): array {
             description: 'Read our training materials',
         ),
         new NavEntry(
-            title: 'Member Info',
-            url: '/members',
+            title: 'Guidelines',
+            url: local_url('guidelines.php'),
             description: 'Useful information for members',
         ),
     );
