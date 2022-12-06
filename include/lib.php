@@ -24,13 +24,13 @@ function php_running_from_cli(): bool {
  * with `.html` instead.
  */
 function local_url(string $url) : string {
+    # Add a prefix '/' only if it's not already present
+    if (!str_starts_with($url, '/'))
+        $url = '/' . $url;
+
     if (php_running_from_cli()) {
         if (str_ends_with($url, '.php')) {
             $trimmed = rtrim($url, '.php');
-
-            # Add a forward '/' only if it's not already present
-            if (!str_starts_with($trimmed, '/'))
-                $trimmed = '/' . $trimmed;
 
             return "$trimmed.html";
         }
@@ -154,16 +154,17 @@ function begin_page(PageMeta $meta) {
 <!DOCTYPE html>
 
 <html lang='en'>
-    <head>
-        <meta charset='utf-8'>
-        <title><?= SITE_TITLE ?></title>
-        <link href='/css/style.css' rel='stylesheet'>
-        <link rel='icon' type='image/x-icon' href='/img/pxg/favicon.png'>
-        <script src='/js/main.js'></script>
-        <script src='/js/jquery.min.js'></script>
-    </head>
 
-    <body>
+<head>
+    <meta charset='utf-8'>
+    <title><?= SITE_TITLE ?></title>
+    <link href='/css/style.css' rel='stylesheet'>
+    <link rel='icon' type='image/x-icon' href='/img/pxg/favicon.png'>
+    <script src='/js/main.js'></script>
+    <script src='/js/jquery.min.js'></script>
+</head>
+
+<body>
 <?php
     echo "\n";
     insert_noscript();
@@ -171,7 +172,9 @@ function begin_page(PageMeta $meta) {
     insert_header($meta);
     echo "\n";
     insert_navigation($meta);
-
+?>
+<div id='wrap'>
+<?php
     if (true === $meta->display_title) {
         echo "\n" . "<h1 id='title'>$meta->title</h1>" . "\n";
     }
@@ -186,10 +189,14 @@ function begin_page(PageMeta $meta) {
  */
 function end_page(PageMeta $meta) {
     echo "\n";
+?>
+</div>
+<?php
     insert_footer($meta);
     echo "\n";
 ?>
-    </body>
+</body>
+
 </html>
 <?php
 }

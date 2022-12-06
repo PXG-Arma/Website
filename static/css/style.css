@@ -33,6 +33,7 @@
 
     /* Dimensions */
     --dim-header-height: 70px;
+    --dim-footer-height: 68px;
     --dim-page-narrow-width: 760px;
     --dim-page-paragraph-width: 1000px;
     --dim-page-max-width: 1600px;
@@ -102,6 +103,7 @@
 
 html {
     color: var(--clr-font-light);
+    background-color: var(--clr-bg-dark);
     font-family: "PT Sans", sans-serif;
     font-size: 15pt;
 }
@@ -158,13 +160,15 @@ ul.no-bullets li {
  * Big page parts
  */
 
-section {
-    margin: 47px auto 35px;
-    max-width: calc(100vw - 2*var(--dim-min-viewport-margin));
+div#wrap {
+    /* Make pages with little content at least as high as the viewport height. */
+    min-height: calc(90vh - var(--dim-header-height) - var(--dim-footer-height) - 2*var(--dim-gradient-line-width));
 }
 
-body > section {
+section {
+    margin: 47px auto 35px;
     width: var(--dim-page-paragraph-width);
+    max-width: calc(100vw - 2*var(--dim-min-viewport-margin));
 }
 
 section.wide {
@@ -349,6 +353,7 @@ footer > div#footer-background {
 }
 
 div#footer-content {
+    height: calc(var(--dim-footer-height) - 16px - 12px);
     max-width: var(--dim-page-paragraph-width);
     margin: 0 auto;
     padding-top: 16px;
@@ -371,10 +376,12 @@ div#footer-icons a {
     margin: 0 6px;
 }
 
-div#footer-icons a > img {
+div#footer-icons img {
     display: block;
     height: 40px;
     width: 40px;
+    height: calc(var(--dim-footer-height) - 16px - 12px);
+    width: calc(var(--dim-footer-height) - 16px - 12px);
     object-fit: contain;
 }
 

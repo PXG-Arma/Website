@@ -35,6 +35,7 @@ var HEADER_MENU_BUTTON_DISABLE_TIME = 400;
 var ID_HEADER_MENU_BUTTON = 'header-menu-button';
 var ID_MAIN_NAV = 'main-navigation';
 var ID_BUTTON_TO_TOP = 'button-to-top';
+var ID_BUTTON_READ_MORE = 'button-read-more';
 
 //
 // Global variables
@@ -77,6 +78,13 @@ document.addEventListener('DOMContentLoaded', function() {
         buttonTop.removeAttribute('href');
         buttonTop.style.cursor = 'pointer';
         buttonTop.addEventListener('click', buttonToTopOnClick);
+    }
+    // If button read more exists, make its functionality animated
+    const buttonReadMore = document.getElementById(ID_BUTTON_READ_MORE);
+    if (undefined !== buttonReadMore) {
+        // Remove the fallback link on the parent element
+        buttonReadMore.parentNode.removeAttribute('href');
+        buttonReadMore.addEventListener('click', buttonReadMoreOnClick);
     }
 });
 
@@ -148,6 +156,15 @@ function viewportOnScroll(event) {
  */
 function buttonToTopOnClick(event) {
     $("html, body").animate({scrollTop: 0}, VIEWPORT_SCROLL_ANIMATION_TIME);
+}
+
+/**
+ * Button read more: on click
+ */
+function buttonReadMoreOnClick(event) {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#features").offset().top - 20
+    }, VIEWPORT_SCROLL_ANIMATION_TIME);
 }
 
 //

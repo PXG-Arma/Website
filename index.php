@@ -11,7 +11,9 @@ begin_page($meta);
 ?>
 <div id='video-block'>
     <video autoplay muted loop>
-        <source src='/video/I_should_not_use_tube.mp4' type='video/mp4'>
+        <!--<source src='/video/I_should_not_use_tube.mp4' type='video/mp4'>-->
+        <source src='/video/PXG_Promo.webm'>
+        <source src='/video/PXG_Promo.mp4'>
     </video>
 
     <div id='video-overlay'>
@@ -22,13 +24,15 @@ begin_page($meta);
             <a href='<?= PXG_DISCORD_LINK ?>'>
                 <button>Join us on Discord</button>
             </a>
-            <button class='light'>Read more</button>
+            <a href='#features'>
+                <button id='button-read-more' class='light'>Read more</button>
+            </a>
         </div>
     </div>
 </div>
 
 <section>
-    <h2>Features</h2>
+    <h2 id='features'>Features</h2>
 
     <div class='feature-blocks'>
         <div>
@@ -55,17 +59,17 @@ begin_page($meta);
 </section>
 
 <section>
-    <h2>Our Trailer</h2>
+    <h2 id='trailer'>Our Trailer</h2>
     <iframe class='emb-yt' width="560" height="315" src="https://www.youtube-nocookie.com/embed/u9pyxjzPg9Q" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
 
 <section class='narrow'>
-    <h2>About Us</h2>
+    <h2 id='about-us'>About Us</h2>
     <p>Dear ADK, may Chiko live a long, prosperous life.</p>
 </section>
 
 <section>
-    <h2>Support Us</h2>
+    <h2 id='support-us'>Support Us</h2>
 
     <div class='button-container'>
         <a href='<?= PXG_SERVER_DONATION_LINK ?>'>
