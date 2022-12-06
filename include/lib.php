@@ -160,9 +160,23 @@ function begin_page(PageMeta $meta) {
 <html lang='en'>
 
 <head>
+    <!-- Metadata -->
     <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <meta name='viewport' content='width=device-width, initial-scale=0.9'>
+<?php if (!empty($meta->description)): ?>
+    <meta name='description' content='<?= htmlspecialchars($meta->description) ?>'>
+<?php endif ?>
+    <!-- Open Graph Data -->
+    <meta property='og:title' content='<?= SITE_TITLE ?>'>
+    <meta property='og:description' content='Phoenix Group is a multinational group with over 60 members from all over the world of varying age groups and skill level, always on the lookout for newcomers to join and experience Arma Reborn.'>
+    <meta property='og:image' content='/img/pxg/logo.png'>
+    <!-- Title -->
+<?php if (empty($meta->title)): ?>
     <title><?= SITE_TITLE ?></title>
+<?php else: ?>
+    <title><?= htmlspecialchars($meta->title) ?> | <?= SITE_TITLE ?></title>
+<?php endif ?>
+    <!-- CSS, favicon, JavaScript -->
     <link href='/css/style.css' rel='stylesheet'>
     <link rel='icon' type='image/x-icon' href='/img/pxg/favicon.png'>
     <script src='/js/main.js'></script>

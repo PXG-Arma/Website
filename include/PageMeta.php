@@ -9,6 +9,8 @@ class PageMeta {
 
     /** Title of the web page. */
     public string $title;
+    /** Description of the page for the metadata in HTML head. */
+    public string $description;
 
     # Boolean switches
 
@@ -22,13 +24,15 @@ class PageMeta {
      */
     function __construct(
         # Actual data
-        string $title,
+        string $title = '',
+        string $description = '',
         # Boolean switches
         bool $display_title = true,
     )
     {
         # Data
         $this->title = $title;
+        $this->description = $description;
         # Switches
         $this->display_title = $display_title;
     }

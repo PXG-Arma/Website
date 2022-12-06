@@ -4,6 +4,7 @@ include_once $_SERVER['PWD'] . '/include/lib.php';
 
 $meta = new PageMeta(
     title: 'Medical',
+    description: 'How to save lives in combat and help your squad complete the mission.',
 );
 
 begin_page($meta);

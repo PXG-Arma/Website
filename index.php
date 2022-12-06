@@ -3,8 +3,8 @@
 include_once $_SERVER['PWD'] . '/include/lib.php';
 
 $meta = new PageMeta(
-    title: 'Phoenix Group Bootcamp',
     display_title: false,
+    description: 'A multinational group with members from all over the world looking to experience Arma Reborn',
 );
 
 begin_page($meta);

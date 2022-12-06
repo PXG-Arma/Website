@@ -4,6 +4,7 @@ include_once $_SERVER['PWD'] . '/include/lib.php';
 
 $meta = new PageMeta(
     title: 'Training',
+    description: 'Training materials to enhance the performance of our group.',
 );
 
 begin_page($meta);
