@@ -35,24 +35,24 @@ begin_page($meta);
 
     <div class='feature-blocks'>
         <div>
-            <img src='/img/icons/cross.svg'>
-            <p>Founded by vetarans</p>
+            <img src='/img/icons/rank-star.svg'>
+            <p>Founded by Arma veterans with over a decade of experience.</p>
         </div>
         <div>
-            <img src='/img/icons/cross.svg'>
-            <p>Over two dozen factions</p>
+            <img src='/img/icons/globe-frame.svg'>
+            <p>Over two dozen varied and authentic playable factions from around the globe.</p>
         </div>
         <div>
-            <img src='/img/icons/cross.svg'>
-            <p>PvE oriented gameplay</p>
+            <img src='/img/icons/banner-star.svg'>
+            <p>PvE oriented gameplay, Wednesday and Sundays at 19:00&nbsp;GMT.</p>
         </div>
         <div>
-            <img src='/img/icons/cross.svg'>
-            <p>Multitude of roles</p>
+            <img src='/img/icons/soldier-helmet.svg'>
+            <p>Specialized roles from Logistics, TACP, Recon, Armor Crew to CAS Pilots.</p>
         </div>
         <div>
-            <img src='/img/icons/cross.svg'>
-            <p>Powerful tools for mission makers</p>
+            <img src='/img/icons/arma-zeus.svg'>
+            <p>Powerful tools and systems for making missions quick, simple and fun.</p>
         </div>
     </div>
 </section>

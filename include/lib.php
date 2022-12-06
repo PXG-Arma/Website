@@ -83,10 +83,10 @@ function insert_footer(PageMeta $meta) {
             <div id='footer-icons'>
                 <div id='footer-icons-left'>
                     <a href='<?= PXG_DISCORD_LINK ?>'>
-                        <img alt='Discord' title='Discord' src='/img/icons/discord.png'>
+                        <img alt='Discord' title='Discord' src='/img/icons/discord.svg'>
                     </a>
                     <a href='<?= PXG_YT_LINK ?>'>
-                        <img alt='YouTube' title='YouTube' src='/img/icons/youtube.png'>
+                        <img alt='YouTube' title='YouTube' src='/img/icons/youtube.svg'>
                     </a>
                     <a id='button-to-top' href='#top'>
                         <img alt='To Top' title='To Top' src='/img/icons/top.svg'>

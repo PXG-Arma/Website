@@ -513,12 +513,13 @@ div.feature-blocks {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 div.feature-blocks > div {
-    width: 200px;
+    width: 240px;
+    margin: 16px 12px;
     text-align: center;
 }
 
