@@ -54,7 +54,7 @@ function insert_header(PageMeta $meta) {
             <div id='header-content'>
                 <div id='header-left'>
                     <div class='logo-box'>
-                        <a href='/'><img id='pxg-logo' title='Phoenix Group' alt='Phoenix Group logo' src='/img/pxg/logo.png'></a>
+                        <a href='/'><img id='pxg-logo' title='Phoenix Group' alt='Phoenix Group logo' src='/img/pxg/logo_text_light.png'></a>
                     </div>
                 </div>
                 <div id='header-center'>
@@ -157,6 +157,7 @@ function begin_page(PageMeta $meta) {
 
 <head>
     <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <title><?= SITE_TITLE ?></title>
     <link href='/css/style.css' rel='stylesheet'>
     <link rel='icon' type='image/x-icon' href='/img/pxg/favicon.png'>

@@ -286,16 +286,13 @@ header div#header-content {
 }
 
 div#header-left {
-    width: var(--dim-header-height);
 }
 div#header-center {
 }
 div#header-right {
-    width: var(--dim-header-height);
 }
 
 header div.logo-box {
-    width: var(--dim-header-height);
     height: var(--dim-header-height);
     display: flex;
     justify-content: center;
@@ -307,8 +304,7 @@ header div.logo-box a {
 }
 header div.logo-box img#pxg-logo {
     display: block;
-    width: calc(var(--dim-header-height) - 2*4px);
-    height: calc(var(--dim-header-height) - 2*4px);
+    height: calc(var(--dim-header-height) - 2*8px);
     object-fit: contain;
 }
 
