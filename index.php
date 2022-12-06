@@ -10,7 +10,7 @@ $meta = new PageMeta(
 begin_page($meta);
 ?>
 <div id='video-block'>
-    <video autoplay muted loop poster>
+    <video autoplay muted loop poster playsinline>
         <source src='/video/PXG_Promo.mp4' type='video/mp4'>
     </video>
 
