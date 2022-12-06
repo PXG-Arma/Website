@@ -497,13 +497,35 @@ div#video-overlay {
 div#video-overlay h2 {
     display: block;
     margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 36pt;
+    margin-bottom: 24px;
+    font-size: 48pt;
 }
 div#video-overlay p {
     display: block;
     margin-top: 0;
     margin-bottom: 40px;
+    line-height: 1.5;
+    font-size: 16pt;
+}
+div#video-overlay .on-wide {
+    display: inline;
+}
+div#video-overlay .on-narrow {
+    display: none;
+}
+
+/* Smaller font size on narrow screens */
+@media screen and not (min-width: 600px) {
+    div#video-overlay h2 {
+        font-size: 36pt;
+    }
+
+    div#video-overlay .on-wide {
+        display: none;
+    }
+    div#video-overlay .on-narrow {
+        display: inline;
+    }
 }
 
 /* Feature list */
