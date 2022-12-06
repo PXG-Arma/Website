@@ -24,8 +24,9 @@ function php_running_from_cli(): bool {
  * with `.html` instead.
  */
 function local_url(string $url) : string {
-    # Add a prefix '/' only if it's not already present
-    if (!str_starts_with($url, '/'))
+    # Add a prefix '/' only if it's not already present and does not start
+    # with http or https
+    if (!str_starts_with($url, 'http') && !str_starts_with($url, '/'))
         $url = '/' . $url;
 
     if (php_running_from_cli()) {

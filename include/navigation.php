@@ -59,8 +59,8 @@ function get_nav_entries(): array {
             description: 'Read our training materials',
         ),
         new NavEntry(
-            title: 'Guidelines',
-            url: local_url('guidelines.php'),
+            title: 'Community Wiki',
+            url: 'https://github.com/PXG-Arma/Policy/wiki',
             description: 'Useful information for members',
         ),
     );
