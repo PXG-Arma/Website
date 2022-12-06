@@ -11,9 +11,8 @@ begin_page($meta);
 ?>
 <div id='video-block'>
     <video autoplay muted loop>
-        <!--<source src='/video/I_should_not_use_tube.mp4' type='video/mp4'>-->
-        <source src='/video/PXG_Promo.webm'>
-        <source src='/video/PXG_Promo.mp4'>
+        <source src='/video/PXG_Promo.mp4' type='video/mp4'>
+        <source src='/video/PXG_Promo.webm' type='video/webm'>
     </video>
 
     <div id='video-overlay'>
