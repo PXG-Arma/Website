@@ -63,7 +63,10 @@ begin_page($meta);
 
 <section class='narrow'>
     <h2 id='about-us'>About Us</h2>
-    <p>Dear ADK, may Chiko live a long, prosperous life.</p>
+
+    <p>Phoenix Group was founded in 2022 by Arma enthusiasts with over a decade of experience playing with some of the largest and best units on the internet, we believe respecting other people's time and effort is of the upmost importance.</p>
+
+    <p>We are a multinational group with over 60 members from all over the world of varying age groups and skill level, always on the lookout for newcomers to join and experience Arma Reborn.</p>
 </section>
 
 <section>

@@ -15,6 +15,8 @@ const PXG_YT_LINK = 'https://www.youtube.com/@purewar673';
 const PXG_SERVER_DONATION_LINK = 'https://billing.gamingdeluxe.co.uk/index.php?m=public_pay&hash_id=b95wE7ZPAmvz';
 /** Link to PXG merch. */
 const PXG_MERCH_LINK = 'https://phoenix-group.myspreadshop.co.uk/';
+/** Link to PXG GitHub repo. */
+const PXG_GITHUB_LINK = 'https://github.com/PXG-Arma';
 
 // EOF
 

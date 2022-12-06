@@ -85,6 +85,9 @@ function insert_footer(PageMeta $meta) {
                     <a href='<?= PXG_DISCORD_LINK ?>'>
                         <img alt='Discord' title='Discord' src='/img/icons/discord.svg'>
                     </a>
+                    <a href='<?= PXG_GITHUB_LINK ?>'>
+                        <img alt='GitHub' title='GitHub' src='/img/icons/github.svg'>
+                    </a>
                     <a href='<?= PXG_YT_LINK ?>'>
                         <img alt='YouTube' title='YouTube' src='/img/icons/youtube.svg'>
                     </a>
