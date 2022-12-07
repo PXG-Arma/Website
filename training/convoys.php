@@ -12,7 +12,7 @@ begin_page($meta);
 <section>
     <figure>
         <img src='/img/figures/ducks.png'>
-        <figcaption>A duck convoy.</figcaption>
+        <figcaption>A duck convoy in staggered formation.</figcaption>
     </figure>
 </section>
 <?php
