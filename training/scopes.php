@@ -26,7 +26,7 @@ begin_page($meta);
             <img src='/img/icons/range_ru.svg'>
             <p>Graph markings to one side.</p>
             <p>Height at a set distance.</p>
-            <p>Ajust zeroing or use grid to aim.</p>
+            <p>Adjust zeroing or use grid to aim.</p>
             <p>Typically on Russian scopes.</p>
         </div>
     </div>

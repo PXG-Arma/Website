@@ -9,8 +9,11 @@ $meta = new PageMeta(
 
 begin_page($meta);
 ?>
-<section class='narrow'>
-Placeholder.
+<section>
+    <figure>
+        <img src='/img/figures/ducks.png'>
+        <figcaption>A duck convoy.</figcaption>
+    </figure>
 </section>
 <?php
 end_page($meta);
