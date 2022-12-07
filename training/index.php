@@ -13,7 +13,7 @@ begin_page($meta);
     <div class='training-blocks'>
         <div>
             <a href='<?= local_url('/training/medical.php') ?>'>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/medical.svg'>
             </a>
             <a href='<?= local_url('/training/medical.php') ?>'>
                 <h5>Medical</h5>

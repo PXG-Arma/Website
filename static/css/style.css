@@ -724,8 +724,8 @@ div.icon-text-rows > div > img {
     display: block;
     margin: auto 0;
     margin-right: 30px;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     object-fit: contain;
 }
 

@@ -196,7 +196,7 @@ begin_page($meta);
 
     <div class='icon-text-rows'>
         <div>
-            <img src='/img/icons/pulse.svg'>
+            <img src='/img/icons/vitals.svg'>
             <div class='text'>
                 <h5>Heart Rate</h5>
                 <ul class='no-bullets'>
@@ -303,7 +303,7 @@ begin_page($meta);
         </div>
         <div>
             <h5>2.&nbsp;Position</h5>
-            <img src='/img/icons/compass.svg'>
+            <img src='/img/icons/position.svg'>
             <p>Move away from threats.</p>
             <p>Mark location as "CCP".</p>
         </div>
@@ -368,7 +368,7 @@ begin_page($meta);
 
     <div class='icon-text-blocks'>
         <div>
-            <img src='/img/icons/mountain.svg'>
+            <img src='/img/icons/terrain.svg'>
             <div class='text'>
                 <h5>Gradual Factors</h5>
                 <ul class='no-bullets'>
@@ -379,7 +379,7 @@ begin_page($meta);
             </div>
         </div>
         <div>
-            <img src='/img/icons/sad-face.svg'>
+            <img src='/img/icons/fatigue.svg'>
             <div class='text'>
                 <h5>Long-Term Effects</h5>
                 <ul class='no-bullets'>
