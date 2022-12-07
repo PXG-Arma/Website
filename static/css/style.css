@@ -626,15 +626,13 @@ div.video-tiles a:hover {
 
 /* Horizontal scroll mode on mobiles */
 @media only screen and (hover: none) and (pointer: coarse) and (max-width: 550px) {
-    section {
-        margin-top: 0px;
-    }
-
     div.video-tiles {
         display: block;
         justify-content: left;
         overflow-x: scroll;
         white-space: nowrap;
+        /* Reduce the effective top margin of the section. */
+        margin-top: -32px;
     }
 
     div.video-tile {
@@ -679,14 +677,26 @@ div.icons-horizontal h5 {
 
 div.icons-horizontal img {
     display: block;
-    width: 80px;
     height: 80px;
+    width: 80px;
     object-fit: contain;
     margin: 18px auto;
 }
 
 div.icons-horizontal p {
     margin: 10px 0;
+}
+
+/* Horizontal icon container variants */
+
+div.icons-horizontal.wide > div {
+    width: 350px;
+    max-width: 90%;
+}
+
+div.icons-horizontal.big-icons img {
+    height: 120px;
+    width: 120px;
 }
 
 /* Text blocks */
@@ -941,6 +951,38 @@ div.training-blocks > div h5 {
 div.training-blocks > div p {
     display: block;
     margin: 8px 0 0;
+}
+
+/*
+ * Figures
+ */
+
+figure {
+    max-width: 90%;
+    margin: 24px auto;
+}
+
+figure img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+figure figcaption {
+    margin: 14px 10px 24px;
+    text-align: center;
+    font-style: italic;
+}
+
+figure.limited-height img {
+    max-height: 70vh;
+}
+
+@media screen and (min-width: 500px) {
+    figure.size-400 img {
+        max-height: 400px;
+        max-width: 400px;
+    }
 }
 
 /*
