@@ -594,7 +594,7 @@ div.video-overlay {
     transition: background 250ms ease;
 }
 div.video-overlay:hover {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 div.video-tiles img {

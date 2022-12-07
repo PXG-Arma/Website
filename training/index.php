@@ -12,7 +12,7 @@ begin_page($meta);
 <section>
     <div class='video-tiles'>
         <div class='video-tile'>
-            <video autoplay muted loop poster playsinline>
+            <video class='play-on-hover' muted loop poster playsinline>
                 <source src='/video/PXG_Promo.mp4' type='video/mp4'>
             </video>
 
@@ -26,7 +26,7 @@ begin_page($meta);
         </div>
 
         <div class='video-tile'>
-            <video autoplay muted loop poster playsinline>
+            <video class='play-on-hover' muted loop poster playsinline>
                 <source src='/video/Air_Force_vs_Navy_Landing_DCS.mp4' type='video/mp4'>
             </video>
 
@@ -40,7 +40,7 @@ begin_page($meta);
         </div>
 
         <div class='video-tile'>
-            <video autoplay muted loop poster playsinline>
+            <video class='play-on-hover' muted loop poster playsinline>
                 <source src='/video/Air_Force_vs_Navy_Landing_DCS.mp4' type='video/mp4'>
             </video>
 

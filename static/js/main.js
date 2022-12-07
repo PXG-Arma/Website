@@ -74,19 +74,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // If button to top exists, make its functionality animated
     const buttonTop = document.getElementById(ID_BUTTON_TO_TOP);
-    if (undefined !== buttonTop) {
+    if (null !== buttonTop) {
         buttonTop.removeAttribute('href');
         buttonTop.style.cursor = 'pointer';
         buttonTop.addEventListener('click', buttonToTopOnClick);
     }
     // If button read more exists, make its functionality animated
     const buttonReadMore = document.getElementById(ID_BUTTON_READ_MORE);
-    if (undefined !== buttonReadMore) {
+    if (null !== buttonReadMore) {
         // Remove the fallback link on the parent element
         buttonReadMore.parentNode.removeAttribute('href');
         buttonReadMore.addEventListener('click', buttonReadMoreOnClick);
     }
+
+    // Make `play-on-hover` videos play on being hovered
+    const hoverVideos = document.querySelectorAll('video.play-on-hover');
+    hoverVideos.forEach((video) => {
+        // Find video's overlay and add events to it
+        const overlay = video.parentNode.querySelector('.video-overlay');
+        if (null !== overlay) {
+            overlay.addEventListener('mouseover', hoverVideoOverlayOnMouseEnter);
+            overlay.addEventListener('mouseleave', hoverVideoOverlayOnMouseLeave);
+        }
+    });
+    // Attach events to video tile containers to handle mobile scrolling
+    const videoTilesContainer = document.querySelectorAll('div.video-tiles');
+    videoTilesContainer.forEach((container) => {
+        container.addEventListener('scroll', videoTilesOnScroll);
+    });
 });
+
+/**
+ * Perform operations when the content loads completely.
+ */
+window.onload = function() {
+    // If in mobile mode, activate the video tiles' scroll event once to get
+    // the visible videos playing.
+    const videoTilesContainer = document.querySelectorAll('div.video-tiles');
+    videoTilesContainer.forEach((container) => {
+        const style = window.getComputedStyle(container)
+        if ('block' === style.getPropertyValue('display')) {
+            //console.debug('Mobile mode: playing visible videos');
+            playOnlyVisible(container);
+        }
+    });
+};
 
 //
 // Event handlers
@@ -142,6 +174,8 @@ function mainNavigationOnMouseLeave(event) {
 
 /**
  * Viewport: on scroll
+ *
+ * Hide navigation if it's shown.
  */
 function viewportOnScroll(event) {
     if (true === isMainNavigationShown() &&
@@ -167,6 +201,36 @@ function buttonReadMoreOnClick(event) {
     }, VIEWPORT_SCROLL_ANIMATION_TIME);
 }
 
+/**
+ * Overlay of a play-on-hover video: on mouse enter
+ */
+function hoverVideoOverlayOnMouseEnter(event) {
+    const video = getHoverVideoNode(event.target);
+    if (null !== video) {
+        video.play();
+    }
+}
+/**
+ * Overlay of a play-on-hover video: on mouse leave
+ */
+function hoverVideoOverlayOnMouseLeave(event) {
+    const video = getHoverVideoNode(event.target);
+    if (null !== video) {
+        video.pause();
+    }
+}
+
+/**
+ * Video tiles container: on scroll
+ *
+ * Play only visible videos on mobile. It does not scroll on desktop.
+ *
+ * https://stackoverflow.com/questions/26866025/pause-and-play-video-when-in-viewport
+ */
+function videoTilesOnScroll(event) {
+    playOnlyVisible(event.target);
+}
+
 //
 // Helper functions
 //
@@ -176,10 +240,6 @@ function buttonReadMoreOnClick(event) {
  */
 function showMainNavigation() {
     const mainNav = document.getElementById(ID_MAIN_NAV);
-    //mainNav.style['animation-direction'] = 'normal';
-    //mainNav.style['animation-name'] = 'fade-in';
-    //mainNav.style.display = 'block';
-    //mainNav.style.opacity = '1';
     $(mainNav).fadeIn(NAVIGATION_TRANSITION_TIME);
 }
 
@@ -249,4 +309,48 @@ function disableHeaderMenuButton() {
         () => { headerMenuButtonEnabled = true},
         HEADER_MENU_BUTTON_DISABLE_TIME
     );
+}
+
+/**
+ * Returns the play-on-hover video node from the same video tile as the
+ * provided `overlayNode`, if it exists. Returns `null` otherwise.
+ */
+function getHoverVideoNode(overlayNode) {
+    let p = event.target.parentNode;
+    if ('A' === p.nodeName) {
+        p = p.parentNode;
+    }
+
+    const video = p.querySelector('video.play-on-hover');
+    if (null !== video) {
+        return video;
+    } else {
+        return null;
+    }
+}
+
+/**
+ * Plays only visible videos of the video tiles container.
+ *
+ * https://stackoverflow.com/questions/26866025/pause-and-play-video-when-in-viewport
+ */
+function playOnlyVisible(container) {
+    const left = $(container).offset().left;
+    const right = left + $(container).width();
+    //console.debug(`Scroll: L${left} : R${right}`);
+
+    const videos = container.querySelectorAll('video.play-on-hover');
+    videos.forEach((video) => {
+        const x1 = $(video).offset().left;
+        const x2 = x1 + $(video).width();
+        //console.debug(`Video: L${x1} : R${x2}`);
+
+        if ((x1 > left && x1 < right) || (x2 > left && x2 < right)) {
+            //console.debug('Play');
+            video.play();
+        } else {
+            //console.debug('Pause');
+            video.pause();
+        }
+    });
 }
