@@ -13,7 +13,7 @@ begin_page($meta);
     <div class='video-tiles'>
         <div class='video-tile'>
             <video class='play-on-hover' muted loop poster playsinline>
-                <source src='/video/PXG_Promo.mp4' type='video/mp4'>
+                <source src='/video/tile-medical.mp4' type='video/mp4'>
             </video>
 
             <a href='<?= local_url('/training/medical.php') ?>'>
@@ -41,7 +41,7 @@ begin_page($meta);
 
         <div class='video-tile'>
             <video class='play-on-hover' muted loop poster playsinline>
-                <source src='/video/Air_Force_vs_Navy_Landing_DCS.mp4' type='video/mp4'>
+                <source src='/video/tile-convoy.mp4' type='video/mp4'>
             </video>
 
             <a href='<?= local_url('/training/convoys.php') ?>'>
