@@ -13,20 +13,6 @@ begin_page($meta);
     <div class='video-tiles'>
         <div class='video-tile'>
             <video class='play-on-hover' muted loop poster playsinline>
-                <source src='/video/tile-medical.mp4' type='video/mp4'>
-            </video>
-
-            <a href='<?= local_url('/training/medical.php') ?>'>
-                <div class='video-overlay'>
-                    <img src='/img/icons/medical.svg'>
-                    <h5>Medical</h5>
-                    <p>How to save lives.</p>
-                </div>
-            </a>
-        </div>
-
-        <div class='video-tile'>
-            <video class='play-on-hover' muted loop poster playsinline>
                 <source src='/video/tile-at.mp4' type='video/mp4'>
             </video>
 
@@ -49,6 +35,20 @@ begin_page($meta);
                     <img src='/img/icons/car.svg'>
                     <h5>Convoys</h5>
                     <p>Together. Organized.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class='video-tile'>
+            <video class='play-on-hover' muted loop poster playsinline>
+                <source src='/video/tile-medical.mp4' type='video/mp4'>
+            </video>
+
+            <a href='<?= local_url('/training/medical.php') ?>'>
+                <div class='video-overlay'>
+                    <img src='/img/icons/medical.svg'>
+                    <h5>Medical</h5>
+                    <p>How to save lives.</p>
                 </div>
             </a>
         </div>

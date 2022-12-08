@@ -9,7 +9,7 @@ $meta = new PageMeta(
 
 begin_page($meta);
 ?>
-<section class='wide'>
+<section class='less-wide'>
     <h2>Ammunition</h2>
 
     <div class='icons-horizontal wide'>
@@ -106,7 +106,7 @@ begin_page($meta);
     </div>
 </section>
 
-<section class='narrow'>
+<section>
     <h2>Ranging</h2>
 
     <div class='icon-text-rows big-icons'>
@@ -132,7 +132,7 @@ begin_page($meta);
 
     <figure class='limited-height'>
         <img src='/img/figures/PZF3_Scope.svg'>
-        <figcaption>Panzerfaust 3 / RGW90 scope.</figcaption>
+        <figcaption>Panzerfaust 3 / RGW&nbsp;90 scope.</figcaption>
     </figure>
 
     <figure class='limited-height'>

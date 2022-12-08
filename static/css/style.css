@@ -185,6 +185,9 @@ section {
 section.wide {
     width: var(--dim-page-max-width);
 }
+section.less-wide {
+    width: 1400px;
+}
 section.narrow {
     width: var(--dim-page-narrow-width);
 }
@@ -854,10 +857,10 @@ div.icon-text-rows > div > img {
 }
 
 div.icon-text-rows.big-icons img {
-    height: 220px;
-    width: 220px;
+    height: 250px;
+    width: 250px;
 }
-@media screen and not (min-width: 500px) {
+@media screen and not (min-width: 650px) {
     div.icon-text-rows.big-icons > div {
         flex-wrap: wrap;
     }

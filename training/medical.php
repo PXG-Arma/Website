@@ -15,13 +15,13 @@ begin_page($meta);
     <div class='icons-horizontal'>
         <div>
             <h5>1.&nbsp;Safety</h5>
-            <img src='/img/icons/crosshair.svg'>
+            <img src='/img/icons/target.svg'>
             <p>Deal with enemy.</p>
             <p>Get to hard cover.</p>
         </div>
         <div>
             <h5>2.&nbsp;Triage</h5>
-            <img src='/img/icons/cross.svg'>
+            <img src='/img/icons/medkit.svg'>
             <p>Check injuries.</p>
             <p>Tourniquet limbs.</p>
         </div>
@@ -33,7 +33,7 @@ begin_page($meta);
         </div>
         <div>
             <h5>4.&nbsp;Assist</h5>
-            <img src='/img/icons/casualty-carry.svg'>
+            <img src='/img/icons/shield.svg'>
             <p>Hold the perimeter.</p>
             <p>Assist fallen comrades.</p>
         </div>
@@ -297,7 +297,7 @@ begin_page($meta);
     <div class='icons-horizontal'>
         <div>
             <h5>1.&nbsp;Assess</h5>
-            <img src='/img/icons/cross.svg'>
+            <img src='/img/icons/medkit.svg'>
             <p>Triage the casualty.</p>
             <p>Assess the situation.</p>
         </div>
@@ -315,7 +315,7 @@ begin_page($meta);
         </div>
         <div>
             <h5>4.&nbsp;Help</h5>
-            <img src='/img/icons/casualty-carry.svg'>
+            <img src='/img/icons/ambulance.svg'>
             <p>Hold the position.</p>
             <p>Load the casualty.</p>
         </div>
@@ -379,7 +379,7 @@ begin_page($meta);
             </div>
         </div>
         <div>
-            <img src='/img/icons/fatigue.svg'>
+            <img src='/img/icons/energy.svg'>
             <div class='text'>
                 <h5>Long-Term Effects</h5>
                 <ul class='no-bullets'>
@@ -390,7 +390,7 @@ begin_page($meta);
             </div>
         </div>
         <div>
-            <img src='/img/icons/cross.svg'>
+            <img src='/img/icons/weight.svg'>
             <div class='text'>
                 <h5>Immediate Factors</h5>
                 <ul class='no-bullets'>
@@ -401,7 +401,7 @@ begin_page($meta);
             </div>
         </div>
         <div>
-            <img src='/img/icons/crosshair-slanted.svg'>
+            <img src='/img/icons/fatigue.svg'>
             <div class='text'>
                 <h5>Short-Term Effects</h5>
                 <ul class='no-bullets'>
