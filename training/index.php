@@ -27,7 +27,7 @@ begin_page($meta);
 
         <div class='video-tile'>
             <video class='play-on-hover' muted loop poster playsinline>
-                <source src='/video/Air_Force_vs_Navy_Landing_DCS.mp4' type='video/mp4'>
+                <source src='/video/tile-at.mp4' type='video/mp4'>
             </video>
 
             <a href='<?= local_url('/training/anti-tank.php') ?>'>
