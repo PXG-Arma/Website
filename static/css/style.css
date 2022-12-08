@@ -136,11 +136,22 @@ h1 {
 
 h2 {
     font-size: 30pt;
-    margin: 28px 20px;
+    margin: 28px 0;
+}
+
+h3 {
+    font-size: 24pt;
+    margin 26px 0;
+}
+
+h4 {
+    font-size: 22pt;
+    margin 22px 0;
 }
 
 h5 {
     font-size: 18pt;
+    margin 20px 0;
 }
 
 /*
@@ -982,6 +993,39 @@ figure.limited-height img {
     figure.size-400 img {
         max-height: 400px;
         max-width: 400px;
+    }
+}
+
+figure.size-250 img {
+    max-height: 250px;
+    max-width: 250px;
+}
+
+figure.caption-inline {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+figure.caption-left img {
+    margin-left: 26px;
+}
+figure.caption-right img {
+    margin-right: 26px;
+}
+figure.caption-inline figcaption {
+    font-style: unset;
+    text-align: left;
+}
+@media screen and not (min-width: 600px) {
+    figure.caption-inline {
+        flex-wrap: wrap;
+    }
+
+    figure.caption-inline img {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 

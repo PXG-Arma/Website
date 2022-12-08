@@ -30,10 +30,10 @@ begin_page($meta);
                 <source src='/video/Air_Force_vs_Navy_Landing_DCS.mp4' type='video/mp4'>
             </video>
 
-            <a href='<?= local_url('/training/scopes.php') ?>'>
+            <a href='<?= local_url('/training/anti-tank.php') ?>'>
                 <div class='video-overlay'>
                     <img src='/img/icons/launcher.svg'>
-                    <h5>AT Scopes</h5>
+                    <h5>Anti-tank</h5>
                     <p>Aim for the boom.</p>
                 </div>
             </a>

@@ -47,7 +47,7 @@ begin_page($meta);
         </div>
         <div>
             <img src='/img/icons/soldier-helmet.svg'>
-            <p>Specialized roles from Logistics, TACP, Recon, Armor Crew to CAS Pilots.</p>
+            <p>Specialized roles from Logistics, TACP, Recon, Armour Crew to CAS Pilots.</p>
         </div>
         <div>
             <img src='/img/icons/arma-zeus.svg'>
