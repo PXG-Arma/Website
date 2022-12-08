@@ -831,6 +831,7 @@ div.icon-text-rows {
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
+    margin: 10px 0;
 }
 
 div.icon-text-rows > div {
@@ -840,6 +841,7 @@ div.icon-text-rows > div {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: left;
+    align-items: center;
 }
 
 div.icon-text-rows > div > img {
@@ -849,6 +851,21 @@ div.icon-text-rows > div > img {
     height: 90px;
     width: 90px;
     object-fit: contain;
+}
+
+div.icon-text-rows.big-icons img {
+    height: 220px;
+    width: 220px;
+}
+@media screen and not (min-width: 500px) {
+    div.icon-text-rows.big-icons > div {
+        flex-wrap: wrap;
+    }
+    div.icon-text-rows.big-icons img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px;
+    }
 }
 
 div.icon-text-rows > div > div.text {
@@ -912,7 +929,7 @@ div.icon-text-blocks > div > div.text p {
 
 div.banner-container {
     width: 90%;
-    margin: 0 auto;
+    margin: 10px auto;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -920,6 +937,7 @@ div.banner-container {
 
 div.banner-container > div {
     display: inline-block;
+    max-width: var(--dim-page-paragraph-width);
     margin: 8px auto;
     padding: 12px 18px;
     color: var(--clr-font-light);

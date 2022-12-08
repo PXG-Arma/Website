@@ -97,25 +97,34 @@ begin_page($meta);
             <td>HEAT, Range 500m, 600mm RHA.</td>
         </tr>
     </table>
+
+
+    <div class='banner-container'>
+        <div class='clr-red'>
+            Utilizing different warheads is key! Inquire with Logistics for additional ammunition types.
+        </div>
+    </div>
 </section>
 
 <section class='narrow'>
     <h2>Ranging</h2>
 
-    <h3>Vehicle Width</h3>
-
-    <figure class='caption-inline caption-right size-250'>
-        <img src='/img/figures/Rangefinder_NATO.svg'>
-        <figcaption>Position a target within a frame to gauge distance and fire, no need to zero.<br>Common on NATO scopes.</figcaption>
-    </figure>
-
-
-    <h3>Vehicle Height</h3>
-
-    <figure class='caption-inline caption-left size-250'>
-        <figcaption>Position a target between the ground line and the curvature to gague distance, use the targeting grid to aim.<br>Common of Russian scopes.</figcaption>
-        <img src='/img/figures/Rangefinder_RU.svg'>
-    </figure>
+    <div class='icon-text-rows big-icons'>
+        <div>
+            <img src='/img/figures/Rangefinder_NATO.svg'>
+            <div class='text'>
+                <h5>Vehicle Width</h5>
+                <p>Position a target within a frame to gauge distance and fire, no need to zero.<br>Common on NATO scopes.</p>
+            </div>
+        </div>
+        <div>
+            <img src='/img/figures/Rangefinder_RU.svg'>
+            <div class='text'>
+                <h5>Vehicle Height</h5>
+                <p>Position a target between the ground line and the curvature to gague distance, use the targeting grid to aim.<br>Common of Russian scopes.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class='narrow'>
@@ -130,6 +139,12 @@ begin_page($meta);
         <img src='/img/figures/RPG7_Scope.svg'>
         <figcaption>RPG-7V2 scope.</figcaption>
     </figure>
+
+    <div class='banner-container'>
+        <div class='clr-red'>
+            Always clear your backblast! Ensure there are no friendlies on your 6:00 before firing.
+        </div>
+    </div>
 </section>
 <?php
 end_page($meta);
