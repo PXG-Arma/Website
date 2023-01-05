@@ -169,7 +169,7 @@ function begin_page(PageMeta $meta) {
     <!-- Open Graph Data -->
     <meta property='og:title' content='<?= SITE_TITLE ?>'>
     <meta property='og:description' content='Phoenix Group is a multinational group with over 60 members from all over the world of varying age groups and skill level, always on the lookout for newcomers to join and experience Arma Reborn.'>
-    <meta property='og:image' content='/img/pxg/logo.svg'>
+    <meta property='og:image' content='/img/pxg/logo.png'>
     <!-- Title -->
 <?php if (empty($meta->title)): ?>
     <title><?= SITE_TITLE ?></title>
