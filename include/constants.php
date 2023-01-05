@@ -6,6 +6,8 @@
 
 /** Title of the site. */
 const SITE_TITLE = 'Phoenix Group';
+/** Domain of the site. */
+const SITE_DOMAIN = 'pxg-arma.github.io';
 
 /** Link to the PXG Discord server. */
 const PXG_DISCORD_LINK = 'https://discord.gg/3heMP2jtyw';
