@@ -98,7 +98,7 @@ function insert_footer(PageMeta $meta) {
                 </div>
                 <div id='footer-icons-right'>
                     <a href='/'>
-                        <img alt='Phoenix Group' title='Phoenix Group' src='/img/pxg/logo.png'>
+                        <img alt='Phoenix Group' title='Phoenix Group' src='/img/pxg/logo.svg'>
                     </a>
                 </div>
             </div>
@@ -169,7 +169,7 @@ function begin_page(PageMeta $meta) {
     <!-- Open Graph Data -->
     <meta property='og:title' content='<?= SITE_TITLE ?>'>
     <meta property='og:description' content='Phoenix Group is a multinational group with over 60 members from all over the world of varying age groups and skill level, always on the lookout for newcomers to join and experience Arma Reborn.'>
-    <meta property='og:image' content='/img/pxg/logo.png'>
+    <meta property='og:image' content='/img/pxg/logo.svg'>
     <!-- Title -->
 <?php if (empty($meta->title)): ?>
     <title><?= SITE_TITLE ?></title>
