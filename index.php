@@ -15,8 +15,8 @@ begin_page($meta);
     </video>
 
     <div id='video-overlay'>
-        <h2>Arma Reborn</h2>
-        <p>Join our community.<span class='on-wide'> </span><br class='on-narrow'>Experience outstanding teamwork.</p>
+        <h2>PXG</h2>
+        <p>Join our community.<span class='on-wide'> </span><br class='on-narrow'>Be a part of the team</p>
 
         <div class='button-container'>
             <a href='<?= PXG_DISCORD_LINK ?>'>
